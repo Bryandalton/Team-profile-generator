@@ -4,10 +4,23 @@ const fs = require('fs')
 
 class Employee {
     constructor(name, id, email, role){
-        this.name = name;
-        this.id= id;
-        this.email = email;
-        this.role = role;
+       const employeeQuestions = [{
+        type: 'input',
+        name: 'name',
+        message: 'Employee name: ' 
+       },{
+        type: 'input',
+        name: 'id',
+        message: 'Employee id: '
+       },{
+        type: 'input',
+        name: 'email',
+        message: 'Employee email: '
+       },{
+        type: 'list',
+        name: 'role',
+        choices: ['Manager', 'Engineer', 'Intern', 'Employee']
+       }]
     }
     getName(){} //inquirer.promt({})
     getId(){}
@@ -16,9 +29,8 @@ class Employee {
 }
 
 class Manager extends Employee {
-    constructor(officeNum, role) {
-        this.officeNum = officeNum;
-        this.role = 'Manager';
+    constructor(officeNum) {
+        
 
         super(name, id, email, role)
     }
@@ -45,3 +57,7 @@ class Intern extends Employee {
     }
     getSchool(){}
 }
+
+
+inquirer.promt()
+.then()
