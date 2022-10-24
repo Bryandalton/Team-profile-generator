@@ -22,24 +22,30 @@ class Employee {
         choices: ['Manager', 'Engineer', 'Intern', 'Employee']
        }]
     }
-    getName(){} //inquirer.promt({})
+    getName(){}
     getId(){}
     getEmail(){}
-    getRole(){return 'Employee'}
+    getRole(){}
 }
 
 class Manager extends Employee {
     constructor(officeNum) {
-        
-
+        const managerQuestion = {
+            type: 'input',
+            name: 'officeNum',
+            message: 'Office number: '
+        }
         super(name, id, email, role)
     }
 }
 
 class Engineer extends Employee {
-    constructor(github, role){
-    this.github = github
-    this.role = 'Engineer'
+    constructor(github){
+        const engineerQuestion = {
+            type: 'input',
+            name: 'github',
+            message: 'Github username: '
+        }
 
 
     super(name, id, email, role)
@@ -48,9 +54,12 @@ class Engineer extends Employee {
 }
 
 class Intern extends Employee {
-    constructor(school, role){
-        this.school = school
-        this.role = 'Intern'
+    constructor(school){
+        const internQuestion = {
+            type: 'input',
+            name: 'school',
+            message: 'School or institution: '
+        }
 
         super(name, id, email, role)
 
