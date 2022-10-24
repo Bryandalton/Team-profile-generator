@@ -1,72 +1,56 @@
-const inquirer = require('inquirer')
-const fs = require('fs')
+const inquirer = require('inquirer');
+const fs = require('fs');
+const Employee = require('./lib/employee');
+const Engineer = require('./lib/engineer');
+const Manager = require('./lib/manager');
+const Intern = require('./lib/intern');
+const employees = [];
+const managerQuestions = [{
+    type: 'input',
+    name: 'name',
+    message: 'Manager name: ' 
+   },{
+    type: 'input',
+    name: 'id',
+    message: 'Employee id: '
+   },{
+    type: 'input',
+    name: 'email',
+    message: 'Employee email: '
+   },{
+    type: 'input',
+    name: 'officeNum',
+    message: 'Office number: '
+   }]
+
+   const engineerQuestions = [{
+    type: 'input',
+    name: 'name',
+    message: 'Employee name: ' 
+   },{
+    type: 'input',
+    name: 'id',
+    message: 'Employee id: '
+   },{
+    type: 'input',
+    name: 'email',
+    message: 'Employee email: '
+   },{
+    type: 'input',
+    name: 'github',
+    message: 'Github Username: '
+   }]
+// how to set up a recursve question structure, aka how to loop back through the questions with additional options per role
 
 
-class Employee {
-    constructor(name, id, email, role){
-       const employeeQuestions = [{
-        type: 'input',
-        name: 'name',
-        message: 'Employee name: ' 
-       },{
-        type: 'input',
-        name: 'id',
-        message: 'Employee id: '
-       },{
-        type: 'input',
-        name: 'email',
-        message: 'Employee email: '
-       },{
-        type: 'list',
-        name: 'role',
-        choices: ['Manager', 'Engineer', 'Intern', 'Employee']
-       }]
+inquirer.promt(managerQuestions)
+.then(({name, id, email, role}) => {
+    let data = {
+        name,
+        id,
+        email,
+        role
     }
-    getName(){}
-    getId(){}
-    getEmail(){}
-    getRole(){}
-}
 
-class Manager extends Employee {
-    constructor(officeNum) {
-        const managerQuestion = {
-            type: 'input',
-            name: 'officeNum',
-            message: 'Office number: '
-        }
-        super(name, id, email, role)
-    }
-}
-
-class Engineer extends Employee {
-    constructor(github){
-        const engineerQuestion = {
-            type: 'input',
-            name: 'github',
-            message: 'Github username: '
-        }
-
-
-    super(name, id, email, role)
-    }
-    getGithub(){}
-}
-
-class Intern extends Employee {
-    constructor(school){
-        const internQuestion = {
-            type: 'input',
-            name: 'school',
-            message: 'School or institution: '
-        }
-
-        super(name, id, email, role)
-
-    }
-    getSchool(){}
-}
-
-
-inquirer.promt()
-.then()
+    employees.push(data)
+})
