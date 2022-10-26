@@ -149,9 +149,9 @@ function addEmployee() {
         <div class="card">
             <h3>${employee.name}</h3>
             <h3>${employee.getRole()}</h3>
-            <p>${employee.id}</p>
-            <p>${employee.email}</p>
-            <p>${getExtra(employee)}</p>
+            <p>ID: ${employee.id}</p>
+            <p>email: ${employee.email}</p>
+            <a href="https://github.com/${getExtra(employee)}"><p>${getExtra(employee)}</p></a>
         </div>
         `
         return card;
@@ -167,7 +167,7 @@ function generateHtml () {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
-        <title>Team Profile</title>
+        <title>My Team</title>
     </head>
     <body>
         <header>My Team</header>
