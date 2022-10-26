@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid black;
+    color: white;
+    background-color: lightcoral;
+    font-size: 2.5rem;
+    padding: 20px;
+}
+
+.grid {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* max-width: 600px; */
+}
+
+.card {
+    margin-top: 20px;
+    border: 2px solid;
+    width: 150px;
+    height: auto;
+    text-align: center;
+    box-shadow: 5px 5px 15px ;
+}
+
+.card h3{
+    margin: 0;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.card p{
+    margin: 0;
+    padding: 10px;
+    border-top: 2px solid;
+}
