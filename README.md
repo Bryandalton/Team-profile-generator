@@ -25,6 +25,8 @@ Typing ```node index``` into an integrated bash terminal will start the program 
 
 link: https://github.com/Bryandalton/Team-profile-generator
 
+Video walkthrough: https://drive.google.com/file/d/1uPheNnYo8Ck6zve9xBcAjJIkXESzMSj1/view
+
 ## Credits
 
 Bryan Dalton

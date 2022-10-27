@@ -136,11 +136,11 @@ function intern(){
 }
     function getExtra(employee){
         if (employee.getRole() == 'Manager'){
-            return employee.officeNum
+             return 'Office#: ' + employee.officeNum
         } else if (employee.getRole() == 'Engineer') {
-            return employee.github
+            return 'Github username: ' + employee.github
         } else if (employee.getRole() == 'Intern') {
-            return employee.school
+            return 'School: ' + employee.school
         } else {return ''}
     }
 function addEmployee() {
@@ -151,7 +151,7 @@ function addEmployee() {
             <h3>${employee.getRole()}</h3>
             <p>ID: ${employee.id}</p>
             <a href="mailto:${employee.email}"><p>email: ${employee.email}</p></a>
-            <p>Github username:${getExtra(employee)}</p>
+            <p>${getExtra(employee)}</p>
         </div>
         `
         return card;
