@@ -150,8 +150,8 @@ function addEmployee() {
             <h3>${employee.name}</h3>
             <h3>${employee.getRole()}</h3>
             <p>ID: ${employee.id}</p>
-            <p>email: ${employee.email}</p>
-            <a href="https://github.com/${getExtra(employee)}"><p>${getExtra(employee)}</p></a>
+            <a href="mailto:${employee.email}"><p>email: ${employee.email}</p></a>
+            <p>Github username:${getExtra(employee)}</p>
         </div>
         `
         return card;
